@@ -14,6 +14,20 @@ struct Name
 };
 
 
+Name read_from_file(ifstream& infile)
+{
+	Name output{};
+	infile >> output.x >> output.y >> output.color;
+	return output;
+}
+
+
+void print(const vector<Name>& names, const size_t n)
+{
+		cout << names[n].x << "         " << names[n].y << "          " << names[n].color << endl;
+}
+
+
 int main()
 {
 	ifstream in("in.txt");
@@ -24,11 +38,9 @@ int main()
 
 	while (in.eof() != true)
 	{
-		Name output;
-		in >> output.x >> output.y >> output.color;
-		names.push_back(output);
-
-		cout << names[n].x << "         " << names[n].y << "          " << names[n].color << endl;
+		names.push_back(read_from_file(in));
+		print(names, n);
 		n++;
 	}
+	in.close();
 }
