@@ -22,25 +22,25 @@ Name read_from_file(ifstream& infile)
 }
 
 
-void print(const vector<Name>& names, const size_t n)
+void print_data(const Name& out)
 {
-		cout << names[n].x << "         " << names[n].y << "          " << names[n].color << endl;
+		cout << out.x << "         " << out.y << "          " << out.color << endl;
 }
 
 
 int main()
 {
-	ifstream in("in.txt");
+	ifstream infile("in.txt");
 	vector<Name> names;
 	size_t n = 0;
 
 	cout << "X" << "          " << "Y" << "          " << "Color" << endl;
 
-	while (in.eof() != true)
+	while (infile.eof() != true)
 	{
-		names.push_back(read_from_file(in));
-		print(names, n);
+		names.push_back(read_from_file(infile));
+		print_data(names[n]);
 		n++;
 	}
-	in.close();
+	infile.close();
 }
