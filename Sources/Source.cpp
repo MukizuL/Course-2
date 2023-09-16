@@ -31,6 +31,11 @@ void print_data(const Name& out)
 int main()
 {
 	ifstream infile("in.txt");
+	if(!infile.is_open())
+	{
+		cout << "File not open!";
+		return 0;
+	}
 	vector<Name> names;
 	size_t n = 0;
 
