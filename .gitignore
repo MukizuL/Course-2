@@ -36,3 +36,7 @@
 *.7z
 *.rar
 *.tar
+
+#Folders
+\x64
+\.vs
