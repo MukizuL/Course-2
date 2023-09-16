@@ -6,26 +6,33 @@
 using namespace std;
 
 
-struct Name
+class Point2D
 {
-	double x;
-	double y;
-	string color;
+private:
+
+	double x_;
+	double y_;
+	string color_;
+
+public:
+
+	Point2D()
+	{
+		x_ = 0;
+		y_ = 0;
+		color_ = "red";
+	}
+
+	explicit Point2D(ifstream& infile)
+	{
+		infile >> x_ >> y_ >> color_;
+	}
+
+	static void print_data(const Point2D& out)
+	{
+		cout << out.x_ << "         " << out.y_ << "          " << out.color_ << endl;
+	}
 };
-
-
-Name read_from_file(ifstream& infile)
-{
-	Name output{};
-	infile >> output.x >> output.y >> output.color;
-	return output;
-}
-
-
-void print_data(const Name& out)
-{
-		cout << out.x << "         " << out.y << "          " << out.color << endl;
-}
 
 
 int main()
@@ -36,15 +43,15 @@ int main()
 		cout << "File not open!";
 		return 0;
 	}
-	vector<Name> names;
+	vector<Point2D> point_2ds;
 	size_t n = 0;
 
 	cout << "X" << "          " << "Y" << "          " << "Color" << endl;
 
 	while (infile.eof() != true)
 	{
-		names.push_back(read_from_file(infile));
-		print_data(names[n]);
+		point_2ds.emplace_back(Point2D(infile));
+		Point2D::print_data(point_2ds[n]);
 		n++;
 	}
 	infile.close();
