@@ -37,12 +37,20 @@ public:
 
 int main()
 {
-	ifstream infile("in.txt");
-	if(!infile.is_open())
+	ifstream infile;
+	infile.exceptions(ifstream::badbit | ifstream::failbit);
+
+	try
 	{
-		cout << "File not open!";
+		infile.open("in.tt");
+	}
+	catch(const ifstream::failure& ex)
+	{
+		cout << ex.what() << endl;
+		cout << ex.code() << endl;
 		return 0;
 	}
+
 	vector<Point2D> point_2ds;
 	size_t n = 0;
 
@@ -50,9 +58,10 @@ int main()
 
 	while (infile.eof() != true)
 	{
-		point_2ds.emplace_back(Point2D(infile));
+		point_2ds.emplace_back(infile);
 		Point2D::print_data(point_2ds[n]);
 		n++;
 	}
+
 	infile.close();
 }
