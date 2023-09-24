@@ -1,60 +1,27 @@
 ﻿//variant 4
 
-#include <iostream>
-#include <fstream>
-#include <vector>
-using namespace std;
-
-
-class Point2D
-{
-private:
-
-	double x_;
-	double y_;
-	string color_;
-
-public:
-
-	Point2D()
-	{
-		x_ = 0;
-		y_ = 0;
-		color_ = "red";
-	}
-
-	explicit Point2D(ifstream& infile)
-	{
-		infile >> x_ >> y_ >> color_;
-	}
-
-	static void print_data(const Point2D& out)
-	{
-		cout << out.x_ << "         " << out.y_ << "          " << out.color_ << endl;
-	}
-};
-
+#include "../Source.h"
 
 int main()
 {
-	ifstream infile;
-	infile.exceptions(ifstream::badbit | ifstream::failbit);
+	std::ifstream infile;
+	infile.exceptions(std::ifstream::badbit | std::ifstream::failbit);
 
 	try
 	{
-		infile.open("in.tt");
+		infile.open("in.txt");
 	}
-	catch(const ifstream::failure& ex)
+	catch(const std::ifstream::failure& ex)
 	{
-		cout << ex.what() << endl;
-		cout << ex.code() << endl;
+		std::cout << ex.what() << std::endl;
+		std::cout << ex.code() << std::endl;
 		return 0;
 	}
 
-	vector<Point2D> point_2ds;
+	std::vector<Point2D> point_2ds;
 	size_t n = 0;
 
-	cout << "X" << "          " << "Y" << "          " << "Color" << endl;
+	std::cout << "X" << "          " << "Y" << "          " << "Color" << std::endl;
 
 	while (infile.eof() != true)
 	{

@@ -7,12 +7,18 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Course-2", "Course-2.vcxpro
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Boost.Test|x64 = Boost.Test|x64
+		Boost.Test|x86 = Boost.Test|x86
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B44B8D2D-3B42-46BA-90CF-E3C4B5FEF192}.Boost.Test|x64.ActiveCfg = Boost.Test|x64
+		{B44B8D2D-3B42-46BA-90CF-E3C4B5FEF192}.Boost.Test|x64.Build.0 = Boost.Test|x64
+		{B44B8D2D-3B42-46BA-90CF-E3C4B5FEF192}.Boost.Test|x86.ActiveCfg = Boost.Test|Win32
+		{B44B8D2D-3B42-46BA-90CF-E3C4B5FEF192}.Boost.Test|x86.Build.0 = Boost.Test|Win32
 		{B44B8D2D-3B42-46BA-90CF-E3C4B5FEF192}.Debug|x64.ActiveCfg = Debug|x64
 		{B44B8D2D-3B42-46BA-90CF-E3C4B5FEF192}.Debug|x64.Build.0 = Debug|x64
 		{B44B8D2D-3B42-46BA-90CF-E3C4B5FEF192}.Debug|x86.ActiveCfg = Debug|Win32
