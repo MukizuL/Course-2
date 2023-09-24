@@ -38,5 +38,6 @@
 *.tar
 
 #Folders
-\x64
+\bin
+\packages
 \.vs

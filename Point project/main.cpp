@@ -1,8 +1,9 @@
-﻿//variant 4
+//variant 4
 
-#include "../Source.h"
+#include <Point Project\main.h>
 
-int main()
+
+int main(int argc, char* argv[])
 {
 	std::ifstream infile;
 	infile.exceptions(std::ifstream::badbit | std::ifstream::failbit);
@@ -21,7 +22,8 @@ int main()
 	std::vector<Point2D> point_2ds;
 	size_t n = 0;
 
-	std::cout << "X" << "          " << "Y" << "          " << "Color" << std::endl;
+	std::cout.setf(std::ios::left);
+	std::cout << std::setw(20) << "X" << std::setw(20) << "Y" << std::setw(20) << "Color" << std::endl;
 
 	while (infile.eof() != true)
 	{
