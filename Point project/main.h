@@ -8,13 +8,11 @@
 class Point2D
 {
 private:
-
 	double x_;
 	double y_;
 	std::string color_;
 
 public:
-
 	Point2D()
 	{
 		x_ = 0;
