@@ -1,6 +1,6 @@
 //variant 4
 
-#include <Point Project\main.h>
+#include "Point Project\main.h"
 
 
 int main(int argc, char* argv[])
@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
 	while (infile.eof() != true)
 	{
 		point_2ds.emplace_back(infile);
-		Point2D::print_data(point_2ds[n]);
+		point_2ds[n].print_data();
 		n++;
 	}
 

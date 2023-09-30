@@ -1,5 +1,5 @@
 #include "pch.h"
-#include <Point Project\main.h>
+#include "Point Project\main.h"
 
 TEST(Point2DTest, DefaultConstructor)
 {
@@ -11,7 +11,7 @@ TEST(Point2DTest, DefaultConstructor)
 
 TEST(Point2DTest, ParametrisizedConstructor_Positive)
 {
-	std::istringstream input("25.7 65.22 blue");
+	std::istringstream input("25.7 65.22 1");
 	const Point2D point(input);
 	EXPECT_EQ(point.get_x(), 25.7);
 	EXPECT_EQ(point.get_y(), 65.22);
@@ -20,7 +20,7 @@ TEST(Point2DTest, ParametrisizedConstructor_Positive)
 
 TEST(Point2DTest, ParametrisizedConstructor_Negative)
 {
-	std::istringstream input("-25.7 -65.22 green");
+	std::istringstream input("-25.7 -65.22 2");
 	const Point2D point(input);
 	EXPECT_EQ(point.get_x(), -25.7);
 	EXPECT_EQ(point.get_y(), -65.22);
@@ -29,11 +29,11 @@ TEST(Point2DTest, ParametrisizedConstructor_Negative)
 
 TEST(Point2DTest, PrintData)
 {
-	std::istringstream input("3.0 4.0 green");
+	std::istringstream input("3.0 4.0 2");
     const Point2D point(input);
 	const std::stringstream output;
     std::streambuf* old_stdout = std::cout.rdbuf(output.rdbuf()); // Redirect cout to stringstream, old_stdout contains address for cout restoration
-    Point2D::print_data(point);
+    point.print_data();
     std::cout.rdbuf(old_stdout); // Restore cout
 
 	const std::string expected_output = "                   3                   4               green\n";

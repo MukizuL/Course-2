@@ -4,25 +4,28 @@
 #include <iostream>
 #include <vector>
 
+enum color{red, blue ,green};
 
 class Point2D
 {
 private:
 	double x_;
 	double y_;
-	std::string color_;
+	color color_;
 
 public:
 	Point2D()
 	{
 		x_ = 0;
 		y_ = 0;
-		color_ = "red";
+		color_ = red;
 	}
 
 	explicit Point2D(std::istream& infile)
 	{
-		infile >> x_ >> y_ >> color_;
+		int color_id;
+		infile >> x_ >> y_ >> color_id;
+		color_ = static_cast<color>(color_id);
 	}
 
 	double get_x() const
@@ -37,11 +40,36 @@ public:
 
 	std::string get_color() const
 	{
-		return color_;
+		switch(color_)
+		{
+		case red:
+			return "red";
+			break;
+		case blue:
+			return "blue";
+			break;
+		case green:
+			return "green";
+			break;
+		}
+		return {};
 	}
 
-	static void print_data(const Point2D& out)
+	void print_data() const
 	{
-		std::cout << std::setw(20) << out.x_ << std::setw(20) << out.y_ << std::setw(20) << out.color_ << std::endl;
+		std::string c;
+		switch(color_)
+		{
+		case red:
+			c = "red";
+			break;
+		case blue:
+			c = "blue";
+			break;
+		case green:
+			c = "green";
+			break;
+		}
+		std::cout << std::setw(20) << x_ << std::setw(20) << y_ << std::setw(20) << c << std::endl;
 	}
 };
