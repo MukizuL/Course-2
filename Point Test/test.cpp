@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "Point Project\main.h"
+#include "Point project/Point2D.h"
 
 TEST(Point2DTest, DefaultConstructor)
 {

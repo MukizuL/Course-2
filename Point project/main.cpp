@@ -1,6 +1,6 @@
 //variant 4
 
-#include "Point Project\main.h"
+#include "Point2D.h"
 
 
 int main(int argc, char* argv[])
