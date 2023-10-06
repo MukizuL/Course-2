@@ -1,5 +1,12 @@
 #include "pch.h"
+#include "Point project/Color.h"
+#include "Point project/Color.cpp"
+#include "Point project/open_file.h"
+#include "Point project/open_file.cpp"
 #include "Point project/Point2D.h"
+#include "Point project/Point2D.cpp"
+#include "Point project/read_file.h"
+#include "Point project/read_file.cpp"
 
 TEST(Point2DTest, DefaultConstructor)
 {
@@ -11,7 +18,7 @@ TEST(Point2DTest, DefaultConstructor)
 
 TEST(Point2DTest, ParametrisizedConstructor_Positive)
 {
-	std::istringstream input("25.7 65.22 1");
+	std::istringstream input("25.7 65.22 blue");
 	const Point2D point(input);
 	EXPECT_EQ(point.get_x(), 25.7);
 	EXPECT_EQ(point.get_y(), 65.22);
@@ -20,7 +27,7 @@ TEST(Point2DTest, ParametrisizedConstructor_Positive)
 
 TEST(Point2DTest, ParametrisizedConstructor_Negative)
 {
-	std::istringstream input("-25.7 -65.22 2");
+	std::istringstream input("-25.7 -65.22 green");
 	const Point2D point(input);
 	EXPECT_EQ(point.get_x(), -25.7);
 	EXPECT_EQ(point.get_y(), -65.22);
@@ -29,7 +36,7 @@ TEST(Point2DTest, ParametrisizedConstructor_Negative)
 
 TEST(Point2DTest, PrintData)
 {
-	std::istringstream input("3.0 4.0 2");
+	std::istringstream input("3.0 4.0 green");
     const Point2D point(input);
 	const std::stringstream output;
     std::streambuf* old_stdout = std::cout.rdbuf(output.rdbuf()); // Redirect cout to stringstream, old_stdout contains address for cout restoration
