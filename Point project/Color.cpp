@@ -14,7 +14,7 @@ std::string to_str(const color c)
 		return "green";
 		break;
 	}
-	return {};
+	return "";
 }
 
 color to_enum(const std::string& c)
@@ -25,5 +25,14 @@ color to_enum(const std::string& c)
 		{ "blue", blue },
 		{ "green", green }
 	};
-	return conversion_table.at(c);
+	try
+	{
+		color a = conversion_table.at(c);
+		return a;
+	}
+	catch(const std::exception &exc)
+	{
+		std::cerr << "Bye";
+		std::exit(1);
+	}
 }

@@ -13,6 +13,7 @@ std::ifstream open_f(const std::string &file)
 	{
 		std::cout << ex.what() << std::endl;
 		std::cout << ex.code() << std::endl;
+		return {};
 	}
 	return res;
 }

@@ -46,3 +46,19 @@ TEST(Point2DTest, PrintData)
 	const std::string expected_output = "                   3                   4               green\n";
     EXPECT_EQ(output.str(), expected_output);
 }
+
+TEST(Point2DTest, GetColorValid)
+{
+	std::istringstream input("3.0 4.0 green");
+	const Point2D point(input);
+	EXPECT_EQ("green", point.get_color());
+}
+
+TEST(Point2DTest, GetColorInValid)
+{
+	ASSERT_DEATH({
+		std::istringstream input("3.0 4.0 black");
+		const Point2D point(input);
+		point.get_color();
+	}, "Bye");
+}

@@ -26,7 +26,8 @@ double Point2D::get_y() const
 
 std::string Point2D::get_color() const
 {
-	return to_str(color_);
+	std::string a = to_str(color_);
+	return a;
 }
 
 void Point2D::print_data() const

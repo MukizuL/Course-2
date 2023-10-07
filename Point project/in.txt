@@ -1,6 +1,6 @@
 22 9 red
 20 2 green
-21 3 blue
+21 3 black
 19 1 green
 19 1 red
 21 3 red
