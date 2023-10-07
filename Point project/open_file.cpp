@@ -11,9 +11,8 @@ std::ifstream open_f(const std::string &file)
 	}
 	catch(const std::ifstream::failure& ex)
 	{
-		std::cout << ex.what() << std::endl;
-		std::cout << ex.code() << std::endl;
-		return {};
+		std::cerr << ex.what() << ", " << ex.code();
+		exit(1);
 	}
 	return res;
 }

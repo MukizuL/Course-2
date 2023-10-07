@@ -32,7 +32,7 @@ color to_enum(const std::string& c)
 	}
 	catch(const std::exception &exc)
 	{
-		std::cerr << "Bye";
+		std::cerr << "Unsupported color";
 		std::exit(1);
 	}
 }

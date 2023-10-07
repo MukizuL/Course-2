@@ -5,7 +5,7 @@
 
 int main(int argc, char* argv[])
 {
-	std::ifstream in = open_f("in.txt");
+	std::ifstream in = open_f("in5.txt");
 	if(in.good() == 1)
 	{
 		std::vector<Point2D> points = read_points_from_stream(in);

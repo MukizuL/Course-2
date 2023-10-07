@@ -60,5 +60,25 @@ TEST(Point2DTest, GetColorInValid)
 		std::istringstream input("3.0 4.0 black");
 		const Point2D point(input);
 		point.get_color();
-	}, "Bye");
+	}, "Unsupported color");
+}
+
+TEST(OpenFile, InvalidFile)
+{
+	ASSERT_DEATH({
+		std::ifstream in = open_f("in5.txt");
+	}, "ios_base::failbit.*");
+}
+
+TEST(OpenFile, ValidFile)
+{
+	std::ifstream in = open_f("in.txt");
+	EXPECT_EQ(in.good(), 1);
+}
+
+TEST(ReadFile, ValidFile)
+{
+	std::istringstream input("3.0 4.0 green -25.7 -65.22 green 25.7 65.22 blue");
+	std::vector<Point2D> a = read_points_from_stream(input);
+	EXPECT_EQ(a.size(), 3);
 }

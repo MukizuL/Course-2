@@ -7,5 +7,8 @@
     &lt;TestId&gt;GTest::7CE2D21B-FF6F-43F3-A60E-3952153E3460::Windows,Version=v10.0.22000::Point2DTest.PrintData&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;GTest::7CE2D21B-FF6F-43F3-A60E-3952153E3460::Windows,Version=v10.0.22000::Point2DTest.GetColor&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;GTest::7CE2D21B-FF6F-43F3-A60E-3952153E3460::Windows,Version=v10.0.22000::Point2DTest.GetColorInValid&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;GTest::7CE2D21B-FF6F-43F3-A60E-3952153E3460::Windows,Version=v10.0.22000::OpenFile.InvalidFile&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;GTest::7CE2D21B-FF6F-43F3-A60E-3952153E3460::Windows,Version=v10.0.22000::OpenFile.ValidFile&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;GTest::7CE2D21B-FF6F-43F3-A60E-3952153E3460::Windows,Version=v10.0.22000::ReadFile.ValidFile&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
