@@ -1,14 +1,4 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f50dbdcb_002D70f5_002D441b_002Db070_002Dac1a1d903925/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from &amp;lt;Point Test&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;GTest::7CE2D21B-FF6F-43F3-A60E-3952153E3460::Windows,Version=v10.0.22000::Point2DTest.DefaultConstructor&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;GTest::7CE2D21B-FF6F-43F3-A60E-3952153E3460::Windows,Version=v10.0.22000::Point2DTest.ParametrisizedConstructor_Positive&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;GTest::7CE2D21B-FF6F-43F3-A60E-3952153E3460::Windows,Version=v10.0.22000::Point2DTest.ParametrisizedConstructor_Negative&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;GTest::7CE2D21B-FF6F-43F3-A60E-3952153E3460::Windows,Version=v10.0.22000::Point2DTest.PrintData&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;GTest::7CE2D21B-FF6F-43F3-A60E-3952153E3460::Windows,Version=v10.0.22000::Point2DTest.GetColor&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;GTest::7CE2D21B-FF6F-43F3-A60E-3952153E3460::Windows,Version=v10.0.22000::Point2DTest.GetColorInValid&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;GTest::7CE2D21B-FF6F-43F3-A60E-3952153E3460::Windows,Version=v10.0.22000::OpenFile.InvalidFile&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;GTest::7CE2D21B-FF6F-43F3-A60E-3952153E3460::Windows,Version=v10.0.22000::OpenFile.ValidFile&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;GTest::7CE2D21B-FF6F-43F3-A60E-3952153E3460::Windows,Version=v10.0.22000::ReadFile.ValidFile&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+  &lt;ProjectFile&gt;7CE2D21B-FF6F-43F3-A60E-3952153E3460/f:test.cpp&lt;/ProjectFile&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
