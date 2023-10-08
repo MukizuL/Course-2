@@ -4,3 +4,5 @@
 Двумерные точки: координаты (два дробных числа), цвет (строка из списка "red", "green", "blue")
 
 Использовался Google C++ Style
+
+![image](https://github.com/MukizuL/Course-2/assets/53896777/591de887-c0ab-47c6-b52b-626f52f92976)
