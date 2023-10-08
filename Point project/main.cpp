@@ -5,9 +5,9 @@
 
 int main(int argc, char* argv[])
 {
-	std::ifstream in = open_f("in5.txt");
-	if(in.good() == 1)
+	try
 	{
+		std::ifstream in = open_f("in.txt");
 		std::vector<Point2D> points = read_points_from_stream(in);
 
 		std::cout.setf(std::ios::left);
@@ -17,5 +17,16 @@ int main(int argc, char* argv[])
 		{
 			elem.print_data();
 		}
+	}
+	catch(const std::ifstream::failure& ex)
+	{
+		std::cerr << ex.what() << ", " << ex.code();
+		exit(1);
+	}
+	catch(const std::out_of_range& ex)
+	{
+		std::cerr << "Unsupported color, stopping...\n";
+		std::cout << ex.what();
+		exit(1);
 	}
 }

@@ -25,14 +25,7 @@ color to_enum(const std::string& c)
 		{ "blue", blue },
 		{ "green", green }
 	};
-	try
-	{
-		color a = conversion_table.at(c);
-		return a;
-	}
-	catch(const std::exception &exc)
-	{
-		std::cerr << "Unsupported color";
-		std::exit(1);
-	}
+
+	color a = conversion_table.at(c);
+	return a;
 }

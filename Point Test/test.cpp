@@ -56,18 +56,18 @@ TEST(Point2DTest, GetColorValid)
 
 TEST(Point2DTest, GetColorInValid)
 {
-	ASSERT_DEATH({
+	EXPECT_THROW({
 		std::istringstream input("3.0 4.0 black");
 		const Point2D point(input);
 		point.get_color();
-	}, "Unsupported color");
+	}, std::out_of_range);
 }
 
 TEST(OpenFile, InvalidFile)
 {
-	ASSERT_DEATH({
+	EXPECT_THROW({
 		std::ifstream in = open_f("in5.txt");
-	}, "ios_base::failbit.*");
+	}, std::ifstream::failure);
 }
 
 TEST(OpenFile, ValidFile)
