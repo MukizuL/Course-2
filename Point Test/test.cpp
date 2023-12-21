@@ -39,8 +39,9 @@ TEST(Point2DTest, PrintData)
 	std::istringstream input("3.0 4.0 green");
     const Point2D point(input);
 	const std::stringstream output;
-    std::streambuf* old_stdout = std::cout.rdbuf(output.rdbuf()); // Redirect cout to stringstream, old_stdout contains address for cout restoration
-    point.print_data();
+    std::streambuf* old_stdout = std::cout.rdbuf(); // Redirect cout to stringstream, old_stdout contains address for cout restoration
+	std::cout.rdbuf(output.rdbuf());
+	point.print_data();
     std::cout.rdbuf(old_stdout); // Restore cout
 
 	const std::string expected_output = "                   3                   4               green\n";
