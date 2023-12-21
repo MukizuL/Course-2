@@ -6,13 +6,10 @@ std::string to_str(const color c)
 	{
 	case red:
 		return "red";
-		break;
 	case blue:
 		return "blue";
-		break;
 	case green:
 		return "green";
-		break;
 	}
 	return "";
 }
@@ -26,6 +23,6 @@ color to_enum(const std::string& c)
 		{ "green", green }
 	};
 
-	color a = conversion_table.at(c);
+	const color a = conversion_table.at(c);
 	return a;
 }
