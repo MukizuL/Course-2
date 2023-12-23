@@ -13,7 +13,7 @@ int main(int argc, char* argv[])
 		std::cout.setf(std::ios::left);
 		std::cout << std::setw(20) << "X" << std::setw(20) << "Y" << std::setw(20) << "Color" << std::endl;
 
-		for(auto &elem : points)
+		for(const auto &elem : points)
 		{
 			elem.print_data();
 		}
