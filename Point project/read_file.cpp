@@ -1,4 +1,5 @@
-﻿#include "read_file.h"
+﻿
+#include "read_file.h"
 
 std::vector<Point2D> read_points_from_stream(std::istream& in)
 {

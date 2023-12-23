@@ -1,4 +1,5 @@
-﻿#include "Color.h"
+﻿
+#include "Color.h"
 
 std::string to_str(const color c)
 {

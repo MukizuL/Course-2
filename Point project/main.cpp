@@ -5,6 +5,7 @@
 
 int main(int argc, char* argv[])
 {
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 	try
 	{
 		std::ifstream in = open_f("in.txt");
@@ -13,7 +14,7 @@ int main(int argc, char* argv[])
 		std::cout.setf(std::ios::left);
 		std::cout << std::setw(20) << "X" << std::setw(20) << "Y" << std::setw(20) << "Color" << std::endl;
 
-		for(auto &elem : points)
+		for(const auto &elem : points)
 		{
 			elem.print_data();
 		}
@@ -29,4 +30,5 @@ int main(int argc, char* argv[])
 		std::cout << ex.what();
 		exit(1);
 	}
+	_CrtDumpMemoryLeaks();
 }
